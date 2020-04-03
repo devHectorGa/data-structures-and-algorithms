@@ -1,0 +1,72 @@
+% Taken from Lena Herrmann at 
+% http://lenaherrmann.net/2010/05/20/javascript-syntax-highlighting-in-the-latex-listings-package
+\documentclass{article}
+\usepackage{listings}
+\usepackage{color}
+\definecolor{lightgray}{rgb}{.9,.9,.9}
+\definecolor{darkgray}{rgb}{.4,.4,.4}
+\definecolor{purple}{rgb}{0.65, 0.12, 0.82}
+
+\lstdefinelanguage{JavaScript}{
+  keywords={break, case, catch, continue, debugger, default, delete, do, else, finally, for, function, if, in, instanceof, new, return, switch, this, throw, try, typeof, var, void, while, class, const, enum, export, extends, import, super, implements, interface, let, package, private, protected, public, static, yield, null, true, false},
+  keywordstyle=\color{blue}\bfseries,
+  ndkeywords={class, export, boolean, throw, implements, import, this},
+  ndkeywordstyle=\color{darkgray}\bfseries,
+  identifierstyle=\color{black},
+  sensitive=false,
+  comment=[l]{//},
+  morecomment=[s]{/*}{*/},
+  commentstyle=\color{purple}\ttfamily,
+  stringstyle=\color{red}\ttfamily,
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\lstset{
+   language=JavaScript,
+   backgroundcolor=\color{lightgray},
+   extendedchars=true,
+   basicstyle=\footnotesize\ttfamily,
+   showstringspaces=false,
+   showspaces=false,
+  %  numbers=left,
+  %  numberstyle=\footnotesize,
+  %  numbersep=9pt,
+   tabsize=2,
+   breaklines=true,
+   showtabs=false,
+   captionpos=b
+}
+
+\title{Data Structures + Algorithms}
+\author{Hector Ferney Garzón Cagua }
+\date{2020}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\include{./01-array}
+
+% \medskip
+% \begin{lstlisting}[caption=My Javascript Example]
+% Name.prototype = {
+%   methodName: function(params){
+%     var doubleQuoteString = "some text";
+%     var singleQuoteString = 'some more text';
+%     // this is a comment
+%     if(this.confirmed != null && typeOf(this.confirmed) == Boolean && this.confirmed == true){
+%       document.createElement('h3');
+%       $('#system').append("This looks great");
+%       return false;
+%     } else {
+%       throw new Error;
+%     }
+%   }
+% }
+% \end{lstlisting}
+
+\end{document}
