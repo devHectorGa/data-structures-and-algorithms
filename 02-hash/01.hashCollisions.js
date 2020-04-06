@@ -16,3 +16,9 @@ console.log(user);
 console.log(user.scream());
 
 // O(n/k)
+
+const a = new Map();
+const b = new Set();
+
+console.log(a);
+console.log(b);
