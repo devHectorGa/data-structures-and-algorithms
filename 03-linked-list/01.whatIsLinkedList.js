@@ -49,7 +49,9 @@ class LinkedList {
     this.length++;
   }
   prepend(value) {
-    // code here
+    // EXERCISE
+    this.head.next = { ...this.head };
+    this.head.value = value;
   }
 }
 
