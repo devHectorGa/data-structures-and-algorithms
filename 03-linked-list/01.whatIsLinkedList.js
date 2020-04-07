@@ -47,17 +47,25 @@ class LinkedList {
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
+    return this;
   }
   prepend(value) {
     // EXERCISE
-    this.head.next = { ...this.head };
-    this.head.value = value;
+    // this.head.next = { ...this.head };
+    // this.head.value = value;
+
+    // SOLUTION
+    const newNode = {
+      value,
+      next: this.head
+    };
+    this.head = newNode;
+    this.length++;
+    return this;
   }
 }
 
 const myLinkedList = new LinkedList(10);
-myLinkedList.append(5);
-myLinkedList.append(16);
-myLinkedList.prepend(1);
-
-console.log(myLinkedList);
+console.log(myLinkedList.append(5));
+console.log(myLinkedList.append(16));
+console.log(myLinkedList.prepend(1));
