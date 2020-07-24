@@ -1,6 +1,0 @@
-\contentsline {section}{\numberline {1}Array}{2}%
-\contentsline {subsection}{\numberline {1.1}Methods in the array}{2}%
-\contentsline {subsubsection}{\numberline {1.1.1}Push}{2}%
-\contentsline {subsubsection}{\numberline {1.1.2}Pop}{2}%
-\contentsline {subsubsection}{\numberline {1.1.3}Unshift}{2}%
-\contentsline {subsubsection}{\numberline {1.1.4}Splice}{3}%
