@@ -1,15 +1,15 @@
 /*  CALL STACK - SINGLE LINE  */
-console.log('1')
-console.log('2')
-console.log('3')
+console.log('1');
+console.log('2');
+console.log('3');
 // It's called step by step in the Language
 
 const one = () => {
   const two = () => {
-    console.log('4')
-  }
-  two()
-}
+    console.log('4');
+  };
+  two();
+};
 
 /* CALL STACK
   console.log()
@@ -19,16 +19,16 @@ const one = () => {
 
 // Recursion
 function foo() {
-  foo()
+  foo();
 }
-foo()
+foo();
 // Loopin over and over the same function. STACK OVERFLOW
 
-console.log('1')
+console.log('1');
 setTimeout(() => {
-  console.log('2')
+  console.log('2');
 }, 2000);
-console.log('3')
+console.log('3');
 
 /* CALL STACK
   console.log('1')
