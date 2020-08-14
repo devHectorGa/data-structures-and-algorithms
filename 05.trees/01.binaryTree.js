@@ -20,4 +20,13 @@ function BinaryTreeNode(value) {
   log nodes = height
 
   log 100 = 2
+  https://visualgo.net
+
+  PROS:
+  Better than O(n)
+  Ordered
+  Flexible Size
+
+  CONS:
+  No O(1) operations
 */
