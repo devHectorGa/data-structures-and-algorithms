@@ -34,26 +34,40 @@ class BinarySearchTree {
     }
   }
   lookup(value) {
+    // if (!this.root) {
+    //   return false;
+    // } else {
+    //   let currentNode = this.root;
+    //   while (true) {
+    //     if (currentNode.value === value) {
+    //       return true;
+    //     } else if (value < currentNode.value) {
+    //       if (!currentNode.left) {
+    //         return false;
+    //       }
+    //       currentNode = currentNode.left;
+    //     } else {
+    //       if (!currentNode.right) {
+    //         return false;
+    //       }
+    //       currentNode = currentNode.right;
+    //     }
+    //   }
+    // }
     if (!this.root) {
       return false;
-    } else {
-      let currentNode = this.root;
-      while (true) {
-        if (currentNode.value === value) {
-          return true;
-        } else if (value < currentNode.value) {
-          if (!currentNode.left) {
-            return false;
-          }
-          currentNode = currentNode.left;
-        } else {
-          if (!currentNode.right) {
-            return false;
-          }
-          currentNode = currentNode.right;
-        }
+    }
+    let currentNode = this.root;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (currentNode.value === value) {
+        return currentNode;
       }
     }
+    return false;
   }
   // remove
 }
